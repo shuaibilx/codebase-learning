@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codebase Learning"
+  short_description: "从真实项目源码生成可恢复、可验证且逐模块推进的个性化学习课程"
+  default_prompt: "使用 $codebase-learning 扫描当前仓库并建立源码驱动的项目学习课程。"
