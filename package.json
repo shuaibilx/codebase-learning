@@ -1,0 +1,30 @@
+{
+  "name": "@shuaibilx/codebase-learning",
+  "version": "1.0.0",
+  "description": "Install the Codebase Learning skill for Codex.",
+  "bin": {
+    "codebase-learning": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "references/*.md",
+    "scripts/*.py",
+    "bin/install.js"
+  ],
+  "scripts": {
+    "test:npm-installer": "node --test tests/npm-installer.test.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuaibilx/codebase-learning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shuaibilx/codebase-learning/issues"
+  },
+  "homepage": "https://github.com/shuaibilx/codebase-learning#readme"
+}

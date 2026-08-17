@@ -1,6 +1,6 @@
 ---
 name: codebase-learning
-description: 基于现有仓库源码创建并推进可续建的项目学习课程，包括仓库导览、学习路线、分模块讲解、源码关联笔记和保留核心机制的最小演示。用户想以课程方式系统学习、分析、拆解或讲解整个代码库，或继续已有课程时使用；不用于常规代码审查、缺陷修复、功能开发、单文件讲解或脱离具体仓库的通用教学。
+description: Create and advance a source-grounded, resumable learning curriculum for an existing codebase. Use for course-style whole-repository learning, analysis, or explanation, including continuing an existing curriculum. Do not use for routine reviews, fixes, feature work, one-file explanations, or generic tutorials.
 ---
 
 # Codebase Learning
@@ -11,13 +11,13 @@ Turn a real repository into a gated course whose scope, order, explanations, and
 
 - Treat project source as the authority for project behavior and curriculum boundaries. Use general knowledge only to explain concepts; never use it to invent project behavior.
 - Use these terms consistently: **Track** is the user-selected learning direction, **Module** is an ordered course unit, **Lesson** is a knowledge point inside a module, and **Demo** is a lesson-linked minimal implementation.
-- Default to beginner-friendly teaching unless the user asks for a compact or advanced style. Define unfamiliar terms before using them, unpack dense syntax, and give generated Demo code detailed teaching comments that explain intent, inputs, outputs, control flow, state changes, and important failure cases.
+- Default to beginner-friendly teaching unless the user asks for a compact or advanced style. Define unfamiliar terms before using them, unpack dense syntax, and give generated Demo code detailed teaching comments that explain intent, inputs, outputs, control flow, state changes, and important failure cases. Write all course artifacts, teaching prose, and generated code comments in English.
 - Write course artifacts only under `code-analysis/`. Do not modify production source, dependencies, lockfiles, or project configuration unless the user separately asks.
 - Keep exactly one canonical machine state at `code-analysis/.codebase-learning/state.json`. Keep `code-analysis/README.md` as its human-readable projection and navigation entry.
 - Generate content for only the current Module. Keep future Modules as roadmap entries; do not create their directories or lesson content.
 - Distinguish artifact completion from learning completion. Codex may mark artifacts verified; only the user's explicit confirmation may mark a Module completed.
 - Give every Module a positive integer `module_revision`, starting at `1`. Treat `(roadmap_version, module_id, module_revision)` as the exact Module-attempt identity; never let a confirmation for an older route or attempt authorize the current one.
-- Require explicit user approval for the Track, roadmap, learner completion, and next-Module transition. Treat “继续” as approval only when exactly one legal transition exists.
+- Require explicit user approval for the Track, roadmap, learner completion, and next-Module transition. Treat an unambiguous request to continue as approval only when exactly one legal transition exists.
 - Use repository-relative POSIX paths in artifacts. Never persist machine-specific absolute paths, credentials, tokens, `.env` contents, or private data.
 - Treat `code-analysis/` as a hard write boundary. Reject symlink, junction, or other reparse-point components in that artifact tree; never follow one to read or write outside the repository.
 - Preserve user edits in an existing `code-analysis/`; patch or merge them instead of silently regenerating files.

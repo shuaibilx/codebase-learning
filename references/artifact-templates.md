@@ -15,27 +15,27 @@ Use these headings as contracts. Adapt content and depth to the repository; do n
 ````markdown
 # Codebase Learning
 
-## 当前状态
-- 范围：
-- 学习方向：
-- 源码快照：
-- 路线版本：
-- 当前阶段：
-- 当前模块与 revision：
-- 下一道 Gate：
+## Current course status
+- Scope:
+- Learning track:
+- Source snapshot:
+- Roadmap version:
+- Current phase:
+- Current Module and revision:
+- Next Gate:
 
-## 学习路线
-- [ ] `01-...` — 学习目标；源码范围
+## Learning roadmap
+- [ ] `01-...` — Learning goal; source scope
 
-## 课程依赖与进度
+## Course dependencies and progress
 ```mermaid
 flowchart LR
   M01["01 ..."] --> M02["02 ..."]
 ```
 
-## 学习规则
-## 导航
-## 扫描覆盖与已知限制
+## Learning rules
+## Navigation
+## Scan coverage and known limitations
 ````
 
 Use the global Mermaid diagram for curriculum dependencies and progress, not runtime architecture.
@@ -45,16 +45,16 @@ Use the global Mermaid diagram for curriculum dependencies and progress, not run
 ```markdown
 # Project Overview
 
-## 分析范围与源码快照
-## 项目作用
-## 技术组成
-## 带职责注释的目录树
-## 文件职责与重要性
-## 系统运行架构
-## 核心入口与主要调用链
-## 测试、配置与外部边界
-## 可选学习方向
-## 扫描覆盖、排除项、未知项与置信度
+## Analysis scope and source snapshot
+## Project purpose
+## Technology stack
+## Annotated directory tree
+## File responsibilities and importance
+## System runtime architecture
+## Primary entry points and key call chains
+## Tests, configuration, and external boundaries
+## Available learning tracks
+## Scan coverage, exclusions, unknowns, and confidence
 ```
 
 Use `00-file-index.md` for an exhaustive large-repository inventory when needed. Keep responsibility claims limited to semantically inspected evidence.
@@ -64,22 +64,22 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ```markdown
 # <NN Module title>
 
-## 路线版本与 Module revision
-## 学习目标与完成标准
-## 学习前需要知道什么
-## 本模块术语表
-## 为什么项目需要它
-## 在系统与课程中的位置
-## 源码入口、边界与证据
-## 调用者、被调用者与数据流
-## 模块流程图
-## Lesson 学习顺序与映射
-| lesson_id | Notebook | Demo(s) | 源码证据 | 关系说明 |
+## Roadmap version and Module revision
+## Learning goal and completion criteria
+## Prerequisites for this Module
+## Module glossary
+## Why the project needs this
+## Place in the system and course
+## Source entry points, boundaries, and evidence
+## Callers, callees, and data flow
+## Module flow diagram
+## Lesson order and mapping
+| lesson_id | Notebook | Demo(s) | Source evidence | Relationship explanation |
 |---|---|---|---|---|
-## 关键类、函数、配置与测试
-## 异常路径、权衡与常见误解
-## Demo 验证结果
-## 学完后自检
+## Key classes, functions, configuration, and tests
+## Error paths, tradeoffs, and common misunderstandings
+## Demo verification results
+## Self-check after learning
 ```
 
 ## Lesson notebook
@@ -87,19 +87,19 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ```markdown
 # <NN Lesson title>
 
-## 学习目标与前置知识
-## 本节术语表
-## 核心机制与存在原因
-## 项目中的真实执行路径
-## 源码证据
-## 输入、状态变化与输出
-## 逐段代码导读
-## 关键分支与错误路径
-## 常见报错与调试方法
-## 与最小 Demo 的对应
-## 常见误解与设计权衡
-## 练习 / 自检问题
-## 完成标准
+## Learning goals and prerequisite knowledge
+## Lesson glossary
+## Core mechanism and why it exists
+## Real execution path in the project
+## Source evidence
+## Inputs, state changes, and outputs
+## Step-by-step code walkthrough
+## Key branches and error paths
+## Common errors and debugging methods
+## Relationship to the minimal Demo
+## Common misunderstandings and design tradeoffs
+## Practice and self-check questions
+## Completion criteria
 ```
 
 ## Demo README
@@ -107,20 +107,20 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ```markdown
 # <lesson_id> Demo
 
-## 教学目标
-## 对应真实源码与符号
-## 保留的核心机制
-## 删除、替换或模拟的部分
-## 与生产实现的已知差异
-## 最小依赖
-## 新手运行步骤
-## 代码注释导读
-## 运行与测试命令
-## 预期结果
-## 实际验证记录
-## 常见报错与排查
-## 验证对应的 Module revision
-## 回看真实源码的问题
+## Teaching objective
+## Corresponding real source and symbols
+## Retained core mechanism
+## Removed, substituted, or simulated parts
+## Known differences from the production implementation
+## Minimal dependencies
+## Beginner-friendly run steps
+## Guide to code comments
+## Run and test commands
+## Expected result
+## Actual verification record
+## Common errors and troubleshooting
+## Module revision covered by verification
+## Questions for revisiting the real source
 ```
 
 Do not create empty headings merely to satisfy the template. Supply evidence-backed content or mark the unresolved item explicitly.

@@ -472,7 +472,7 @@ class RepoInventoryCliTests(unittest.TestCase):
         """Ignoring --output would prevent the skill from persisting its inventory artifact."""
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            (root / "源码.py").write_text("value = 1\n", encoding="utf-8")
+            (root / "source.py").write_text("value = 1\n", encoding="utf-8")
             output = root / "inventory.json"
 
             result = subprocess.run(
@@ -486,7 +486,7 @@ class RepoInventoryCliTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(result.stdout, "")
             payload = json.loads(output.read_text(encoding="utf-8"))
-            self.assertEqual(payload["files"][0]["path"], "源码.py")
+            self.assertEqual(payload["files"][0]["path"], "source.py")
 
     def test_output_option_creates_missing_parent_directories(self):
         """A fresh code-analysis tree should not need to be pre-created by the caller."""
