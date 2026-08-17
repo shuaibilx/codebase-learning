@@ -66,6 +66,8 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 
 ## 路线版本与 Module revision
 ## 学习目标与完成标准
+## 学习前需要知道什么
+## 本模块术语表
 ## 为什么项目需要它
 ## 在系统与课程中的位置
 ## 源码入口、边界与证据
@@ -86,10 +88,14 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 # <NN Lesson title>
 
 ## 学习目标与前置知识
+## 本节术语表
 ## 核心机制与存在原因
 ## 项目中的真实执行路径
 ## 源码证据
+## 输入、状态变化与输出
+## 逐段代码导读
 ## 关键分支与错误路径
+## 常见报错与调试方法
 ## 与最小 Demo 的对应
 ## 常见误解与设计权衡
 ## 练习 / 自检问题
@@ -107,9 +113,12 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ## 删除、替换或模拟的部分
 ## 与生产实现的已知差异
 ## 最小依赖
+## 新手运行步骤
+## 代码注释导读
 ## 运行与测试命令
 ## 预期结果
 ## 实际验证记录
+## 常见报错与排查
 ## 验证对应的 Module revision
 ## 回看真实源码的问题
 ```

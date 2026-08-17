@@ -5,6 +5,7 @@ Use this reference to build, teach, verify, or repair the current Module.
 ## Contents
 
 - Module structure
+- Beginner-first teaching contract
 - README contract
 - Lesson notebook contract
 - Demo contract
@@ -29,6 +30,20 @@ code-analysis/<NN-module-slug>/
 
 Number Lessons in learning order. Use stable `lesson_id` values such as `01-agent-loop`. Keep Notebook and Demo names aligned when the mapping is one-to-one; use an explicit mapping table for every one-to-many or many-to-one relationship.
 
+## Beginner-first teaching contract
+
+Unless the user asks for a compact or advanced style, assume the learner understands only basic variables, conditions, loops, and functions. Make every artifact usable without requiring them to infer hidden prerequisites.
+
+- Introduce required background before the mechanism and define each unfamiliar project or language term on first use.
+- Walk through a concrete input from entrypoint to output. Name the data or state before and after each important step.
+- Break dense production excerpts into small logical blocks. Explain compact syntax and language idioms before relying on them.
+- Give each non-trivial generated Demo function a learner-facing docstring covering its purpose, parameters, return value, side effects, and expected exceptions when applicable.
+- Add comments before every non-obvious block to explain why it exists, what decision it makes, and what changes afterward. Add a short inline comment when a single expression contains syntax a beginner may not recognize.
+- Explain common entry guards, context managers, comprehensions, callbacks, decorators, asynchronous control flow, generics, or framework lifecycle hooks the first time they appear.
+- Include at least one likely error or edge case and show the learner where to inspect intermediate values when debugging.
+- Prefer the user's language for teaching prose and code comments; default to clear Chinese when the user writes in Chinese.
+- Keep comments synchronized with the executable code. Do not inflate comment count by restating obvious assignments or punctuation; move long conceptual explanations into the Notebook or Demo README when that keeps the source easier to follow.
+
 ## README contract
 
 Answer all of these with project evidence:
@@ -47,14 +62,16 @@ Include a Module-level Mermaid control/data-flow diagram plus prose. Add a Lesso
 Teach a concept extracted from the Module, not a paraphrase of a whole source file. Include:
 
 1. learning objective and prerequisite;
-2. the mechanism and why it exists;
-3. a traced project flow with source evidence;
-4. the main branch plus important error/edge paths;
-5. common misconception or design tradeoff;
-6. a compact source excerpt only when it materially helps;
-7. a comparison to the linked Demo;
-8. one or more self-check questions or exercises;
-9. an exit criterion.
+2. a short glossary for unfamiliar terms;
+3. the mechanism and why it exists;
+4. a traced project flow with source evidence;
+5. a small-block walkthrough of important code, including input, state change, and output;
+6. the main branch plus important error/edge paths and a beginner-friendly debugging hint;
+7. common misconception or design tradeoff;
+8. a compact source excerpt only when it materially helps;
+9. a comparison to the linked Demo;
+10. one or more self-check questions or exercises;
+11. an exit criterion.
 
 Use Mermaid only when a diagram makes this single Lesson clearer.
 
@@ -67,7 +84,7 @@ Every Demo must:
 - name its `lesson_id` and source symbols;
 - retain the project's decisive control/data flow;
 - remove tracing, retry, middleware, persistence, or integration detail only when incidental to the Lesson;
-- explain why important lines exist using clear Chinese comments unless the user asks for another language;
+- follow the beginner-first contract for docstrings and comments, including non-obvious syntax, input/output flow, state changes, entrypoints, and likely failures;
 - avoid credentials, private data, network writes, destructive side effects, and implicit package installation;
 - run independently with the smallest existing dependency set, or state the exact unavoidable dependency;
 - include expected output or assertions and a safe local run command;

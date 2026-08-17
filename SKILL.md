@@ -1,6 +1,6 @@
 ---
 name: codebase-learning
-description: Generate and advance a source-grounded, resumable learning curriculum for an existing codebase. Use when the user asks Codex to 学习、拆解或系统讲解整个项目源码, map a repository into code-analysis/, choose a source-derived learning track, create or continue ordered modules, produce source-linked notebooks and minimal mechanism-preserving demos, or resume an existing codebase-learning course. Do not use for ordinary code review, bug fixing, feature implementation, a one-off file explanation, or generic tutorials unrelated to a concrete repository.
+description: 基于现有仓库源码创建并推进可续建的项目学习课程，包括仓库导览、学习路线、分模块讲解、源码关联笔记和保留核心机制的最小演示。用户想以课程方式系统学习、分析、拆解或讲解整个代码库，或继续已有课程时使用；不用于常规代码审查、缺陷修复、功能开发、单文件讲解或脱离具体仓库的通用教学。
 ---
 
 # Codebase Learning
@@ -11,6 +11,7 @@ Turn a real repository into a gated course whose scope, order, explanations, and
 
 - Treat project source as the authority for project behavior and curriculum boundaries. Use general knowledge only to explain concepts; never use it to invent project behavior.
 - Use these terms consistently: **Track** is the user-selected learning direction, **Module** is an ordered course unit, **Lesson** is a knowledge point inside a module, and **Demo** is a lesson-linked minimal implementation.
+- Default to beginner-friendly teaching unless the user asks for a compact or advanced style. Define unfamiliar terms before using them, unpack dense syntax, and give generated Demo code detailed teaching comments that explain intent, inputs, outputs, control flow, state changes, and important failure cases.
 - Write course artifacts only under `code-analysis/`. Do not modify production source, dependencies, lockfiles, or project configuration unless the user separately asks.
 - Keep exactly one canonical machine state at `code-analysis/.codebase-learning/state.json`. Keep `code-analysis/README.md` as its human-readable projection and navigation entry.
 - Generate content for only the current Module. Keep future Modules as roadmap entries; do not create their directories or lesson content.
