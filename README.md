@@ -62,23 +62,15 @@ For this `codebase-learning` repository, one possible source-derived course coul
 codebase-learning/                     # The repository being studied
 └── code-analysis/                     # Generated course artifacts
     ├── .codebase-learning/            # Machine-readable course state
-    │   ├── state.json                 # Current Gate, track, and Module status
-    │   └── inventory.json             # Safe repository inventory and source snapshot
     ├── README.md                      # Course home, progress, and navigation
-    ├── 00-project-overview.md         # Project purpose, architecture, and entry points
-    ├── 00-file-index.md               # Optional: detailed inventory for large repositories
-    └── 01-course-workflow-and-gates/  # Example: the current Module
+    ├── 01-course-workflow-and-gates/  # Example: the current Module
         ├── README.md                  # Module guide and source evidence
         ├── notebook/
-        │   ├── 01-orientation-gate.md
-        │   └── 02-course-state.md
         └── demo/
-            └── 01-gate-transition/
-                ├── README.md          # How this Demo relates to real source code
-                └── gate_transition_demo.py
+    └── 02-.../                        # Created only after you choose to advance
 ```
 
-The `01-course-workflow-and-gates/` directory above is only an example. It would appear only after roadmap approval, and its exact name, notebooks, and Demo files depend on the selected learning path and the source code.
+The `01-course-workflow-and-gates/` directory above is only an example. It appears only after roadmap approval, and its exact name and contents depend on the selected learning path and the source code.
 
 ### Visual Guides in the Course
 
