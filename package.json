@@ -2,6 +2,7 @@
   "name": "@shuaibilx/codebase-learning",
   "version": "1.0.0",
   "description": "Install the Codebase Learning skill for Codex.",
+  "license": "MIT",
   "bin": {
     "codebase-learning": "bin/install.js"
   },

@@ -73,3 +73,7 @@ scripts/                 Inventory and course-validation helpers
 bin/install.js           npm command that installs the Skill payload
 tests/                   Regression tests for helpers and the npm installer
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
