@@ -69,12 +69,12 @@ Use relative POSIX paths. Prefer symbol plus line range because line numbers alo
 
 ## Write the overview
 
-Use the exact headings in [artifact-templates.md](artifact-templates.md). Keep diagram roles distinct:
+Use the exact headings in [artifact-templates.md](artifact-templates.md). Keep visualization roles distinct and select each representation through [visualization-routing.md](visualization-routing.md):
 
-- Global README: curriculum dependency and progress diagram.
+- Global README: curriculum dependency and progress visual.
 - `00-project-overview.md`: system runtime architecture and major call chains.
 - Module README: internal control/data flow for that Module.
-- Notebook: a diagram only when it materially clarifies one Lesson.
+- Notebook: a visual only when it materially clarifies one Lesson.
 
 For at most 400 project-owned files, include an annotated learning tree and a concise responsibility table in the overview. Above that threshold:
 
@@ -94,7 +94,7 @@ Require all of the following before setting `awaiting_track`:
 - exclusions, unknowns, and coverage counts disclosed;
 - project purpose and technology composition supported by source evidence;
 - important directories/files explained at the appropriate scale;
-- runtime architecture and one or more core call chains explained with Mermaid and prose;
+- runtime architecture and one or more core call chains explained with an appropriate visual and prose;
 - entrypoints, tests, configuration, and external boundaries identified;
 - repository-derived Track options listed;
 - README projection synchronized with canonical state.

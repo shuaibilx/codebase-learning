@@ -80,14 +80,17 @@ codebase-learning/                     # The repository being studied
 
 The `01-course-workflow-and-gates/` directory above is only an example. It would appear only after roadmap approval, and its exact name, notebooks, and Demo files depend on the selected learning path and the source code.
 
-### Mermaid Diagrams in the Course
+### Visual Guides in the Course
 
-The generated course uses Mermaid diagrams where a visual explanation is useful:
+The generated course chooses the clearest Markdown-friendly visual for the relationship being taught. Mermaid is one option, not the default for every topic:
 
-- `code-analysis/README.md` shows the learning roadmap, Module dependencies, and progress.
-- `00-project-overview.md` shows the system runtime architecture and major call chains.
-- Each Module `README.md` can show its internal control flow and data flow.
-- A Lesson notebook includes a diagram only when it helps explain one focused concept.
+- An annotated directory tree explains hierarchy and file ownership.
+- A Markdown table compares responsibilities or maps Lessons, Demos, and source symbols.
+- A Mermaid flowchart, sequence, state, class, or ER diagram explains a relationship that is easier to follow visually.
+- A Mermaid flowchart with labelled subgraphs can show swimlanes when responsibilities cross people, services, or system layers.
+- A repository image or small accessible SVG is used only when text-based visuals cannot explain the source-grounded concept clearly.
+
+Every visual has one teaching purpose and is accompanied by explanation and source evidence. The course uses a visual only when it improves understanding.
 
 ## License
 

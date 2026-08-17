@@ -10,7 +10,8 @@ Select tools by capability, not by product-specific namespace. Treat examples as
 | Artifact editing | Create small, reviewable changes | Structured patch editing such as `apply_patch` | Safe workspace editor | Preserve user edits; never rewrite production files implicitly |
 | Demo verification | Execute local commands and tests | Codex local shell in the existing project environment | Project-native test runner | If unavailable, record `not_run`/`blocked`; never claim runnable |
 | User Gates | Ask one focused decision and wait | Native user-input interaction | None | Ask a concise plain-language question and stop |
-| Existing visuals | Inspect checked-in diagrams/screenshots/UI assets | Image inspection such as `view_image` | Browser preview | Skip when irrelevant; do not generate an image for Mermaid |
+| Visual explanations | Select, inspect, or render a source-grounded visual | Markdown tables, annotated trees, Mermaid, or a structured SVG | Image inspection and browser preview | Read `visualization-routing.md`; fall back to prose and source links when a visual adds no clarity |
+| Existing visual assets | Inspect checked-in diagrams, screenshots, and UI assets before citing or reusing them | Image inspection such as `view_image` | Browser preview | Skip when irrelevant; record an inspection limitation instead of inferring image content |
 | External context | Read primary documentation | Codex web search or in-app browser | Documentation connector | Use only when requested or needed; separate external context from source facts and cite it |
 | Session progress | Track work within the current turn | A session plan tool | None | Never substitute a session plan for persisted course state |
 
@@ -37,4 +38,5 @@ Keep repository source sufficient for the core workflow. Use external sources on
 - Do not fail Orientation solely because an optional accelerator is unavailable.
 - When command execution is unavailable, distinguish “documented” from “verified.”
 - When an image cannot be inspected, record the limitation instead of inferring its contents.
+- Do not use generated raster art, stock imagery, or decorative icons to imply project behavior. Reuse an existing project visual only when it is relevant and its source path can be cited. Create a small SVG only when Markdown-native text, table, tree, and Mermaid forms cannot communicate the needed relationship clearly.
 - When search coverage is incomplete, preserve `unknown` items and ask for scope or access rather than fabricating roles.

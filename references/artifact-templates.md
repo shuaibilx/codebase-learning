@@ -38,7 +38,7 @@ flowchart LR
 ## Scan coverage and known limitations
 ````
 
-Use the global Mermaid diagram for curriculum dependencies and progress, not runtime architecture.
+The Mermaid fence above is only one possible representation. Select the visual through [visualization-routing.md](visualization-routing.md): a dependency graph, milestone table, or annotated sequence may be clearer for the course. Keep this global visual focused on curriculum dependencies and progress, not runtime architecture.
 
 ## Project overview
 
@@ -72,7 +72,7 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ## Place in the system and course
 ## Source entry points, boundaries, and evidence
 ## Callers, callees, and data flow
-## Module flow diagram
+## Module visual model
 ## Lesson order and mapping
 | lesson_id | Notebook | Demo(s) | Source evidence | Relationship explanation |
 |---|---|---|---|---|
@@ -93,6 +93,7 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ## Real execution path in the project
 ## Source evidence
 ## Inputs, state changes, and outputs
+## Visual explanation when helpful
 ## Step-by-step code walkthrough
 ## Key branches and error paths
 ## Common errors and debugging methods
@@ -115,6 +116,7 @@ Use `00-file-index.md` for an exhaustive large-repository inventory when needed.
 ## Minimal dependencies
 ## Beginner-friendly run steps
 ## Guide to code comments
+## Visual demo trace when helpful
 ## Run and test commands
 ## Expected result
 ## Actual verification record

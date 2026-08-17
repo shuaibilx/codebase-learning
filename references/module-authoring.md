@@ -41,7 +41,7 @@ Unless the user asks for a compact or advanced style, assume the learner underst
 - Add comments before every non-obvious block to explain why it exists, what decision it makes, and what changes afterward. Add a short inline comment when a single expression contains syntax a beginner may not recognize.
 - Explain common entry guards, context managers, comprehensions, callbacks, decorators, asynchronous control flow, generics, or framework lifecycle hooks the first time they appear.
 - Include at least one likely error or edge case and show the learner where to inspect intermediate values when debugging.
-- Prefer the user's language for teaching prose and code comments; default to clear Chinese when the user writes in Chinese.
+- Write all teaching prose and code comments in English.
 - Keep comments synchronized with the executable code. Do not inflate comment count by restating obvious assignments or punctuation; move long conceptual explanations into the Notebook or Demo README when that keeps the source easier to follow.
 
 ## README contract
@@ -55,7 +55,7 @@ Answer all of these with project evidence:
 - Which Lessons and Demos teach its mechanisms?
 - What must the learner be able to explain or change to finish?
 
-Include a Module-level Mermaid control/data-flow diagram plus prose. Add a Lesson mapping table with columns `lesson_id`, Notebook, Demo(s), source evidence, and relationship notes.
+Use [visualization-routing.md](visualization-routing.md) to select a Module-level visual model plus prose. For example, use a control/data-flow diagram, a swimlane diagram, an annotated call trace, or a responsibility table according to the relationship being taught. Add a Lesson mapping table with columns `lesson_id`, Notebook, Demo(s), source evidence, and relationship notes.
 
 ## Lesson notebook contract
 
@@ -73,7 +73,7 @@ Teach a concept extracted from the Module, not a paraphrase of a whole source fi
 10. one or more self-check questions or exercises;
 11. an exit criterion.
 
-Use Mermaid only when a diagram makes this single Lesson clearer.
+Add a visual only when it makes this single Lesson clearer. Select the representation through `visualization-routing.md`; a state diagram, comparison table, annotated tree, step trace, or source image may be more useful than Mermaid.
 
 ## Demo contract
 
@@ -115,7 +115,7 @@ Before setting the Module to `verified`:
 
 1. Confirm the Module README, at least one Notebook Markdown file, and at least one Demo README exist.
 2. Check every declared source path and symbol against the current source snapshot.
-3. Check Mermaid fences and diagram labels for consistency with prose.
+3. Check each visual for consistency with prose: Mermaid fences parse, tables and trees remain readable, and image or SVG paths, alt text, captions, and source references are valid.
 4. Run each safe Demo command and focused test in the project's existing environment.
 5. Record exact commands, exit codes, date/time, and relevant results in state and the Demo README.
 6. Run `validate_course.py` or the manual equivalent.

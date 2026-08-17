@@ -12,6 +12,7 @@ Turn a real repository into a gated course whose scope, order, explanations, and
 - Treat project source as the authority for project behavior and curriculum boundaries. Use general knowledge only to explain concepts; never use it to invent project behavior.
 - Use these terms consistently: **Track** is the user-selected learning direction, **Module** is an ordered course unit, **Lesson** is a knowledge point inside a module, and **Demo** is a lesson-linked minimal implementation.
 - Default to beginner-friendly teaching unless the user asks for a compact or advanced style. Define unfamiliar terms before using them, unpack dense syntax, and give generated Demo code detailed teaching comments that explain intent, inputs, outputs, control flow, state changes, and important failure cases. Write all course artifacts, teaching prose, and generated code comments in English.
+- Use visualizations as evidence-backed teaching aids, never as decoration. Select the Markdown-native representation that best clarifies the relationship: an annotated tree, table, timeline, Mermaid diagram, swimlane, existing source visual, or small accessible static figure. Give every visual a single purpose, a caption or surrounding explanation, and source links where it makes project claims.
 - Write course artifacts only under `code-analysis/`. Do not modify production source, dependencies, lockfiles, or project configuration unless the user separately asks.
 - Keep exactly one canonical machine state at `code-analysis/.codebase-learning/state.json`. Keep `code-analysis/README.md` as its human-readable projection and navigation entry.
 - Generate content for only the current Module. Keep future Modules as roadmap entries; do not create their directories or lesson content.
@@ -95,6 +96,8 @@ After explicit roadmap approval or a legal next-Module transition, read [module-
 ## Select tools by capability
 
 Read [tool-routing.md](references/tool-routing.md) whenever tool availability, repository scale, external research, images, or parallel analysis affects execution. Tool examples are preferences, not dependencies. Keep the main agent as the only writer to `code-analysis/`.
+
+Read [visualization-routing.md](references/visualization-routing.md) whenever a course artifact would be clearer with a diagram, annotated tree, table, timeline, source image, or static figure. Do not default to Mermaid.
 
 Use the bundled helpers when Python is available:
 

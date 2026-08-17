@@ -22,7 +22,7 @@ The README must show:
 - selected scope and Track;
 - source revision/fingerprint summary;
 - ordered Module checklist;
-- dependency/progress Mermaid diagram;
+- dependency/progress visual selected through `visualization-routing.md`;
 - one-sentence learning goal and source area for each Module;
 - current phase and exact next Gate;
 - learning rules, including one-Module-only generation.
